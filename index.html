@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>N&W S2 Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./media/orb.png">
+  </head>
+  <body>
+    <div class = "center-content fade-in-image">
+        <img src = "media/orb.png">
+        <h1 class = "page-title">connect w/ builders</h1>
+        <p class = "page-paragraph">Meet other builders that are participating in Buildspace N&W S2. Think Buildspace Lunchclub.</p>
+        <form class = "input-form" method="POST" action="https://script.google.com/macros/s/AKfycbwsc3alFRuAFUNuQgb7vQUPTT3zGK3U1tz6eTvQTIrN_v2qpDUzBjPV0RgI-HQzjm9Owg/exec" target="iframe">
+                <input class = "text-input" placeholder = "LinkedIn" type = "text" name="Linkedin" required>
+                <input class = "text-input" placeholder = "Phone #" type = "text" name="Phone" required>
+            <input id = "submit-button" value = "let's do it" type = "submit">
+        </form>
+        <iframe name="iframe" style="position: absolute; visibility: hidden"></iframe>
+    </div>
+	<script src="index.js"></script>
+    <footer>
+        <span class = "footer-link"><a href = "mailto:cnakayama567@gmail.com">Contact Us</a></span> | <span class = "footer-link"><a href = "mailto:cnakayama567@gmail.com">Request a Connect</a></span>
+    </footer>
+    <script>
+        function submitted () {
+            document.querySelector(".page-paragraph").innerHTML = "Your profile has been submittted! We'll contact you with your first introduction!";
+            document.querySelector(".input-form").style.visibility = "hidden";
+        }
+        document.getElementById("submit-button").addEventListener("click", submitted);
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzFGNNkkDOlCJFdm9X11lFOzmQnvgpkm-Nfyh06bk-Z9o0gxxkssTFARcQ8QnOrwdieKA/exec'
+        form.addEventListener('submit', e => {
+          submitButton.disabled = true
+          e.preventDefault()
+          let requestBody = new FormData(form)
+          fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+               alert('Success!', response)
+               submitButton.disabled = false
+              })
+            .catch(error => {
+            alert('Error!', error.message)
+              submitButton.disabled = false
+            }
+            )
+        })
+     </script>
+  </body>
+</html>

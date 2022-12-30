@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./media/background.png");
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    bottom: 5vw;
+    position: fixed;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    width: 100%;
+}
+
+.footer-link {
+    font-weight: 100;
+    margin: 0 2vw;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 10vw;
+}
+
+.page-title {
+    font-size: 7.75vw;
+    margin: 3vw 0 ;
+}
+
+.page-paragraph {
+    text-align: center;
+    font-weight: 100;
+    width: 80%;
+    font-size: 4.5vw;
+    margin: 3vw 0;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.text-input {
+    font-family: 'Roboto', sans-serif;
+    margin: 3vw 0;
+    width: 75vw;
+    font-size: 5vw;
+    font-weight: 100;
+    background-color: transparent;
+    color: white;
+    border: 0.3vw solid white;
+    border-radius: 1vw;
+    padding: 3vw 4vw;
+}
+
+#submit-button {
+    font-family: 'IBM Plex Mono', monospace;
+    background: linear-gradient(91.04deg, #DA4F32 14.58%, #E89663 69.79%, #F4D890 100%);
+    color: white;
+    padding: 3vw 0;
+    border: none;
+    font-weight: 900;
+    font-size: 5vw;
+    border-radius: 1vw;
+    margin-top: 5vw;
+}
+
+.fade-in-image { animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
