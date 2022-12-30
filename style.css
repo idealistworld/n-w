@@ -13,8 +13,7 @@ body {
 
 footer {
     font-family: 'Roboto', sans-serif;
-    bottom: 5vw;
-    position: fixed;
+    margin: 25vw 0;
     text-align: center;
     color: white;
     font-weight: 900;
@@ -77,7 +76,11 @@ footer {
     font-weight: 900;
     font-size: 5vw;
     border-radius: 1vw;
-    margin-top: 5vw;
+    margin: 5vw 0;
+}
+
+#orb {
+    height: 60vw;
 }
 
 .fade-in-image { animation: fadeIn 5s; }
