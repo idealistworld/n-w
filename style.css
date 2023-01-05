@@ -13,11 +13,25 @@ body {
 
 footer {
     font-family: 'Roboto', sans-serif;
-    margin: 25vw 0;
     text-align: center;
     color: white;
     font-weight: 900;
+    margin: 0vw;
+}
+
+#page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     width: 100%;
+}
+
+#flex-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-link {
@@ -35,7 +49,7 @@ footer {
 }
 
 .page-title {
-    font-size: 7.75vw;
+    font-size: 7vw;
     margin: 3vw 0 ;
 }
 
@@ -43,7 +57,7 @@ footer {
     text-align: center;
     font-weight: 100;
     width: 80%;
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 3vw 0;
 }
 
@@ -52,13 +66,11 @@ footer {
     flex-direction: column;
 }
 
-
-
 .text-input {
     font-family: 'Roboto', sans-serif;
     margin: 3vw 0;
     width: 75vw;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 100;
     background-color: transparent;
     color: white;
@@ -74,7 +86,7 @@ footer {
     padding: 3vw 0;
     border: none;
     font-weight: 900;
-    font-size: 5vw;
+    font-size: 3.5vw;
     border-radius: 1vw;
     margin: 5vw 0;
 }
@@ -99,3 +111,86 @@ a:hover {
     opacity: 0.5;
     cursor: pointer;
 }
+
+input:focus {outline:none;}
+
+@media (min-width: 600px) {
+    .center-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        color: white;
+        margin-top: 0vw;
+    }    
+
+    .page-title {
+        font-size: 4vw;
+        margin: 1vw 0 ;
+    }
+    
+    .page-paragraph {
+        text-align: center;
+        font-weight: 100;
+        width: 80%;
+        font-size: 2vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    .text-input {
+        font-family: 'Roboto', sans-serif;
+        width: 35vw;
+        font-size: 2vw;
+        font-weight: 100;
+        background-color: transparent;
+        color: white;
+        border: 0.1vw solid white;
+        border-radius: 1vw;
+        padding: 1vw 2vw;
+        margin: 1.5vw 0vw;
+    }
+
+    #orb {
+        height: 40vw;
+    }
+
+    #submit-button {
+        font-family: 'IBM Plex Mono', monospace;
+        background: linear-gradient(91.04deg, #DA4F32 14.58%, #E89663 69.79%, #F4D890 100%);
+        color: white;
+        padding: 1.25vw 0;
+        border: none;
+        font-weight: 900;
+        font-size: 2vw;
+        border-radius: 1vw;
+        margin: 0vw 0;
+        margin-top: 2.5vw;
+    }
+
+    #flex-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 0;
+        margin-bottom: 3vw;
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        width: 100%;
+    }
+
+    #page-container {
+        height: 100vh;
+        width: 100vw;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+  }
